@@ -1,0 +1,109 @@
+/* Minimal additional styles for Committees pages - most styling uses Bootstrap classes */
+
+/* Transition effects for committee cards */
+.hover-translate-y {
+    transition: all 0.3s ease;
+  }
+  
+  .hover-translate-y:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* Committee banner styling */
+  .committee-banner {
+    min-height: 50vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 767.98px) {
+    .committee-banner {
+      min-height: 40vh;
+      background-attachment: scroll;
+    }
+  }
+  
+  /* Committee icons in cards */
+  .committee-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border-radius: 50%;
+  }
+  
+  /* Member profile images */
+  .member-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+  }
+  
+  .member-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Accordion custom styling */
+  .committee-accordion .accordion-item {
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .committee-accordion .accordion-button:not(.collapsed) {
+    background-color: var(--sse-primary);
+    color: white;
+  }
+  
+  .committee-accordion .accordion-button:focus {
+    box-shadow: none;
+    border-color: transparent;
+  }
+  
+  /* Document list styling */
+  .document-list .document-item {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 10px;
+    background-color: var(--sse-light);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .document-list .document-item:hover {
+    background-color: rgba(249, 132, 61, 0.1);
+  }
+  
+  .document-list .document-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--sse-secondary);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px;
+  }
+  
+  /* Team member card hover effect */
+  .team-member-card {
+    transition: all 0.3s ease;
+  }
+  
+  .team-member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+  }

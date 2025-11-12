@@ -1,0 +1,872 @@
+/* CSS for Page Sections */
+
+/* ===== About Section ===== */
+.about-section {
+  padding: 150px 0 100px;
+  background-color: var(--sse-light, #f8f9fa);
+}
+
+.about-content h5 {
+  color: var(--sse-secondary, #F9843D);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about-content h2 {
+  color: var(--sse-primary, #8E3D19);
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.about-content h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 3px;
+  background-color: var(--sse-secondary, #F9843D);
+}
+
+.about-content p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--sse-gray, #6c757d);
+}
+
+.about-features {
+  margin-bottom: 30px;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.feature i {
+  font-size: 24px;
+  color: var(--sse-secondary, #F9843D);
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+.feature h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.feature p {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+
+.about-image {
+  position: relative;
+  z-index: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-image::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: -30px;
+  width: 100%;
+  height: 100%;
+  border: 5px solid var(--sse-secondary, #F9843D);
+  border-radius: 10px;
+  z-index: -1;
+}
+
+.experience-badge {
+  position: absolute;
+  bottom: -30px;
+  right: 30px;
+  width: 120px;
+  height: 120px;
+  background-color: var(--sse-primary, #8E3D19);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.experience-badge .years {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.experience-badge .text {
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ===== Placement Section ===== */
+.placement-section {
+  padding: 100px 0;
+  background-color: var(--sse-light, #f8f9fa);
+}
+
+.placement-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.placement-content h5 {
+  color: var(--sse-secondary, #F9843D);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.placement-content h2 {
+  color: var(--sse-primary, #8E3D19);
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.placement-content h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 80px;
+  height: 3px;
+  background-color: var(--sse-secondary, #F9843D);
+}
+
+.placement-content p {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--sse-gray, #6c757d);
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+/* ===== Testimonials Section ===== */
+.testimonials-section {
+  padding: 100px 0;
+}
+
+.quote-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 30px;
+  color: rgba(249, 132, 61, 0.1);
+}
+
+.quote {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--sse-gray, #6c757d);
+  margin-bottom: 20px;
+}
+
+.student-info {
+  display: flex;
+  align-items: center;
+}
+
+.student-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+}
+
+.student-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.student-details h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.student-details p {
+  font-size: 14px;
+  color: var(--sse-gray, #6c757d);
+  margin-bottom: 0;
+}
+
+/* ===== Announcements Section ===== */
+.announcements-section {
+  padding: 100px 0;
+  background-color: var(--sse-light, #f8f9fa);
+}
+
+.announcements-card h3, 
+.campus-life-card h3 {
+  color: var(--sse-primary, #8E3D19);
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.announcements-card h3::after, 
+.campus-life-card h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--sse-secondary, #F9843D);
+}
+
+.announcement-item {
+  display: flex;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.announcement-item:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.announcement-date {
+  min-width: 100px;
+  margin-right: 20px;
+}
+
+.announcement-date span {
+  display: inline-block;
+  padding: 5px 12px;
+  background-color: var(--sse-light, #f8f9fa);
+  border-radius: 4px;
+  font-size: 13px;
+  color: var(--sse-dark, #343a40);
+}
+
+.announcement-content h4 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.announcement-content a {
+  font-size: 14px;
+  color: var(--sse-secondary, #F9843D);
+  display: inline-flex;
+  align-items: center;
+}
+
+.announcement-content a i {
+  margin-left: 5px;
+  transition: all 0.3s ease;
+}
+
+.announcement-content a:hover i {
+  transform: translateX(5px);
+}
+
+.view-all-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--sse-primary, #8E3D19);
+  font-weight: 500;
+}
+
+.campus-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.gallery-item {
+  border-radius: 5px;
+  overflow: hidden;
+  height: 120px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+.explore-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--sse-blue, #1D9DD9);
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.explore-btn:hover {
+  background-color: var(--sse-primary, #8E3D19);
+  color: white;
+}
+
+/* ===== CTA Section ===== */
+.cta-section {
+  padding: 80px 0;
+  background: linear-gradient(to right, var(--sse-primary, #8E3D19), var(--sse-secondary, #F9843D));
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assets/pattern.png');
+  opacity: 0.1;
+}
+
+.cta-content {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-content h2 {
+  color: white;
+  font-size: 36px;
+  margin-bottom: 15px;
+}
+
+.cta-content p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* ===== Life at SSE Section ===== */
+.life-at-sse-section {
+  padding: 100px 0;
+  background-color: #fff;
+}
+
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.category-tab {
+  padding: 10px 20px;
+  margin: 0 5px 10px;
+  background-color: #f8f9fa;
+  border: none;
+  border-radius: 30px;
+  color: var(--sse-dark);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.category-tab.active {
+  background-color: var(--sse-secondary);
+  color: white;
+}
+
+.category-tab:hover {
+  background-color: var(--sse-primary);
+  color: white;
+}
+
+.life-content-wrapper {
+  margin-bottom: 50px;
+}
+
+.life-content {
+  padding-right: 30px;
+}
+
+.life-content h2 {
+  color: var(--sse-primary);
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.life-content p {
+  color: var(--sse-gray);
+  margin-bottom: 30px;
+  line-height: 1.8;
+}
+
+.life-features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.life-feature {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.life-feature:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--sse-secondary);
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.feature-icon i {
+  color: white;
+  font-size: 16px;
+}
+
+.life-image {
+  position: relative;
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.life-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
+}
+
+.life-gallery {
+  margin-top: 40px;
+}
+
+.life-gallery .gallery-item {
+  position: relative;
+  height: 200px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.life-gallery .gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.life-gallery .gallery-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.life-gallery .gallery-item:hover img {
+  transform: scale(1.1);
+}
+
+/* ===== Faculty Section ===== */
+.faculty-section {
+  padding: 100px 0;
+  background-color: var(--sse-light);
+}
+
+.department-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.department-tab {
+  padding: 10px 20px;
+  margin: 0 5px 10px;
+  background-color: white;
+  border: none;
+  border-radius: 30px;
+  color: var(--sse-dark);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.department-tab.active {
+  background-color: var(--sse-primary);
+  color: white;
+}
+
+.department-tab:hover {
+  background-color: var(--sse-secondary);
+  color: white;
+}
+
+.faculty-cards {
+  margin-bottom: 30px;
+}
+
+.faculty-card {
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.faculty-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.faculty-image {
+  height: 250px;
+  overflow: hidden;
+}
+
+.faculty-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.faculty-card:hover .faculty-image img {
+  transform: scale(1.1);
+}
+
+.faculty-info {
+  padding: 20px;
+}
+
+.faculty-info h3 {
+  font-size: 18px;
+  color: var(--sse-primary);
+  margin-bottom: 5px;
+}
+
+.faculty-info .position {
+  display: block;
+  font-size: 14px;
+  color: var(--sse-secondary);
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.faculty-info .specialization {
+  font-size: 14px;
+  color: var(--sse-dark);
+  margin-bottom: 5px;
+}
+
+.faculty-info .education {
+  font-size: 13px;
+  color: var(--sse-gray);
+  margin-bottom: 15px;
+}
+
+.view-profile {
+  display: inline-flex;
+  align-items: center;
+  color: var(--sse-secondary);
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.view-profile i {
+  margin-left: 5px;
+  transition: all 0.3s ease;
+}
+
+.view-profile:hover i {
+  transform: translateX(5px);
+}
+
+/* ===== Video Background Section ===== */
+.video-bg-section {
+  position: relative;
+  height: 600px;
+  overflow: hidden;
+}
+
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+  z-index: 2;
+}
+
+.video-content {
+  position: relative;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  z-index: 3;
+  color: white;
+}
+
+.content-box {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  padding: 40px;
+  backdrop-filter: blur(5px);
+}
+
+.content-box h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.content-box p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.key-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.highlight-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--sse-secondary);
+  border-radius: 50%;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.highlight-icon i {
+  color: white;
+  font-size: 20px;
+}
+
+.highlight-text h4 {
+  font-size: 18px;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.highlight-text p {
+  font-size: 14px;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.video-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1199.98px) {
+  .about-image::before {
+    display: none;
+  }
+  
+  .life-content {
+    padding-right: 0;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .about-section {
+    padding: 80px 0;
+  }
+  
+  .about-content {
+    margin-bottom: 50px;
+  }
+  
+  .experience-badge {
+    right: 0;
+  }
+  
+  .cta-content h2 {
+    font-size: 30px;
+  }
+  
+  .placement-content {
+    margin-top: 50px;
+  }
+  
+  .life-image {
+    height: 350px;
+  }
+  
+  .video-bg-section {
+    height: auto;
+  }
+  
+  .video-content {
+    height: auto;
+    padding: 80px 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .about-section,
+  .placement-section,
+  .announcements-section,
+  .testimonials-section,
+  .life-at-sse-section,
+  .faculty-section {
+    padding: 60px 0;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .testimonial-card {
+    margin-bottom: 30px;
+  }
+  
+  .campus-gallery {
+    grid-template-columns: 1fr;
+  }
+  
+  .campus-gallery .gallery-item {
+    height: 180px;
+  }
+  
+  .life-features {
+    grid-template-columns: 1fr;
+  }
+  
+  .highlight-item {
+    width: 100%;
+  }
+  
+  .video-buttons {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .stats-container {
+    flex-direction: column;
+  }
+  
+  .category-tabs, 
+  .department-tabs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .category-tab, 
+  .department-tab {
+    flex: 0 0 auto;
+    white-space: nowrap;
+  }
+  
+  .content-box {
+    padding: 25px;
+  }
+  
+  .content-box h2 {
+    font-size: 28px;
+  }
+}

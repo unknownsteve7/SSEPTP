@@ -1,0 +1,366 @@
+/* components.css - Styles for reusable UI components */
+
+/* ===== Button Component ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn i {
+  margin-left: 10px;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover i {
+  transform: translateX(5px);
+}
+
+/* Button Variants */
+.btn-primary {
+  background-color: var(--sse-secondary);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--sse-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  color: white;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: var(--sse-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.btn-read-more {
+  background-color: var(--sse-primary);
+  color: white;
+}
+
+.btn-read-more:hover {
+  background-color: var(--sse-secondary);
+  color: white;
+}
+
+.btn-cta-primary {
+  background-color: white;
+  color: var(--sse-primary);
+  padding: 12px 30px;
+}
+
+.btn-cta-primary:hover {
+  background-color: var(--sse-dark);
+  color: white;
+}
+
+.btn-cta-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  padding: 12px 30px;
+}
+
+.btn-cta-secondary:hover {
+  background-color: white;
+  color: var(--sse-primary);
+}
+
+.btn-view-all {
+  background-color: var(--sse-dark);
+  color: white;
+  margin-top: 20px;
+}
+
+.btn-view-all:hover {
+  background-color: var(--sse-primary);
+}
+
+/* Responsive button */
+@media (max-width: 575.98px) {
+  .btn-block-sm {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ===== Section Header Component ===== */
+.section-header {
+  margin-bottom: 50px;
+}
+
+.section-header h5 {
+  color: var(--sse-secondary);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.section-header h2 {
+  color: var(--sse-primary);
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-header h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  background-color: var(--sse-secondary);
+}
+
+.section-header.text-center h2::after {
+  left: 50%;
+  width: 80px;
+  transform: translateX(-50%);
+}
+
+.section-header:not(.text-center) h2::after {
+  left: 0;
+  width: 80px;
+}
+
+.section-header p {
+  max-width: 700px;
+  margin: 0 auto;
+  color: var(--sse-gray);
+}
+
+/* Responsive section header */
+@media (max-width: 767.98px) {
+  .section-header {
+    margin-bottom: 30px;
+  }
+  
+  .section-header h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .section-header h2 {
+    font-size: 24px;
+  }
+}
+
+/* ===== Card Component ===== */
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.card-default,
+.card-program,
+.card-testimonial,
+.card-announcement {
+  padding: 30px;
+}
+
+/* Card Elements */
+.card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background-color: var(--sse-light);
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.card-icon i {
+  font-size: 24px;
+  color: var(--sse-primary);
+}
+
+.card-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--sse-dark);
+}
+
+.card-content {
+  margin-bottom: 15px;
+}
+
+.card-footer {
+  margin-top: auto;
+}
+
+/* ===== Stat Card Component ===== */
+.stat-card {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  padding: 20px 10px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--sse-primary);
+  margin-bottom: 5px;
+}
+
+.stat-label {
+  font-size: 14px;
+  margin-bottom: 0;
+  color: var(--sse-gray);
+}
+
+@media (max-width: 575.98px) {
+  .stat-card {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+/* ===== Note Box Component ===== */
+.note-box {
+  display: flex;
+  align-items: flex-start;
+  background-color: rgba(249, 132, 61, 0.1);
+  padding: 25px;
+  border-radius: 15px;
+  border-left: 4px solid var(--sse-secondary);
+}
+
+.note-icon {
+  font-size: 24px;
+  color: var(--sse-secondary);
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.note-content {
+  flex: 1;
+}
+
+.note-content h4 {
+  color: var(--sse-primary);
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.note-content p {
+  color: var(--sse-gray);
+  margin-bottom: 10px;
+}
+
+.note-content p:last-child {
+  margin-bottom: 0;
+}
+
+.note-content ul {
+  margin-bottom: 0;
+  padding-left: 20px;
+}
+
+.note-content li {
+  margin-bottom: 8px;
+  color: var(--sse-gray);
+}
+
+@media (max-width: 991.98px) {
+  .note-box {
+    flex-direction: column;
+  }
+  
+  .note-icon {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+}
+
+/* ===== Form Components ===== */
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control, 
+.form-select {
+  height: 48px;
+  border-radius: 8px;
+  border: 1px solid #e2e2e2;
+  padding: 0 15px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--sse-secondary);
+  box-shadow: 0 0 0 3px rgba(249, 132, 61, 0.1);
+}
+
+textarea.form-control {
+  height: auto;
+  padding: 15px;
+  resize: vertical;
+}
+
+.form-check {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+.form-check-input {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: var(--sse-secondary);
+  border-color: var(--sse-secondary);
+}
+
+.form-check-label {
+  cursor: pointer;
+  font-weight: normal;
+  margin-bottom: 0;
+}
+
+.required {
+  color: var(--sse-red);
+  margin-left: 3px;
+}

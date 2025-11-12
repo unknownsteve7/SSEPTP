@@ -1,0 +1,78 @@
+/* hostelLife.css - Minimal additional styles leveraging existing CSS */
+
+/* Most styles inherit from LifeAtSSE.css and campusFacilities.css */
+
+/* Testimonial card styling specific to hostel testimonials */
+.testimonial-card {
+    transition: all 0.3s ease;
+  }
+  
+  .testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* Subtle styling for rules section */
+  .hostel-rule {
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+  }
+  
+  .hostel-rule:hover {
+    background-color: rgba(249, 132, 61, 0.05);
+  }
+  
+  /* FAQ accordion custom styling */
+  .accordion-button:not(.collapsed) {
+    background-color: rgba(249, 132, 61, 0.1);
+    color: var(--sse-primary);
+    box-shadow: none;
+  }
+  
+  .accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(249, 132, 61, 0.25);
+  }
+  
+  /* Virtual tour card hover effect */
+  .virtual-tour-card {
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .virtual-tour-card img {
+    transition: transform 0.5s ease;
+  }
+  
+  .virtual-tour-card:hover img {
+    transform: scale(1.05);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 767.98px) {
+    .parallax-header {
+      background-attachment: scroll;
+    }
+    
+    .hostel-stats-row {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    
+    .hostel-stats-row > div {
+      flex: 0 0 50%;
+    }
+  }
+  
+  @media (max-width: 575.98px) {
+    .feature-icon-wrapper {
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+    }
+    
+    .feature-icon-wrapper i {
+      font-size: 14px;
+    }
+  }

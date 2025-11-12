@@ -1,0 +1,667 @@
+/* layout.css - Layout components including navbar, sidebar, footer */
+
+/* ===== Navbar ===== */
+.navbar {
+  padding: 15px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+.navbar-scrolled {
+  background-color: #112c7e;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  height: 50px;
+  transition: height 0.3s ease;
+}
+
+.navbar-scrolled .navbar-logo {
+  height: 40px;
+}
+
+/* Navbar Toggle Button for Mobile */
+.navbar-toggler {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.navbar-toggler span {
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+}
+
+.navbar-toggler span:nth-child(1) { top: 0; }
+.navbar-toggler span:nth-child(2) { top: 10px; }
+.navbar-toggler span:nth-child(3) { top: 20px; }
+
+.navbar-toggler.active span:nth-child(1) {
+  top: 10px;
+  transform: rotate(135deg);
+}
+
+.navbar-toggler.active span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.navbar-toggler.active span:nth-child(3) {
+  top: 10px;
+  transform: rotate(-45deg);
+}
+
+/* Navigation Links */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  position: relative;
+  margin: 0 5px;
+}
+
+.nav-link {
+  color: white !important;
+  font-weight: 500;
+  padding: 8px 15px !important;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--sse-secondary);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after, 
+.nav-item.active .nav-link::after {
+  width: 70%;
+}
+
+/* Dropdown Styles */
+.dropdown-toggle::after {
+  display: inline-block;
+  margin-left: .255em;
+  vertical-align: .255em;
+  content: "";
+  border-top: .3em solid;
+  border-right: .3em solid transparent;
+  border-bottom: 0;
+  border-left: .3em solid transparent;
+}
+
+.dropdown-menu {
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  margin-top: 5px;
+  transition: all 0.3s ease;
+  transform-origin: top center;
+  animation: dropdownFadeIn 0.3s forwards;
+}
+
+.dropdown-item {
+  padding: 8px 15px;
+  color: var(--sse-dark);
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.dropdown-item:hover, 
+.dropdown-item:focus {
+  background-color: rgba(249, 132, 61, 0.1);
+  color: var(--sse-secondary);
+  transform: translateX(5px);
+}
+
+/* Apply Button */
+.btn-apply {
+  background-color: var(--sse-secondary);
+  color: white !important;
+  padding: 8px 20px !important;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-left: 10px;
+  transition: all 0.3s ease !important;
+  border: 2px solid var(--sse-secondary);
+  text-decoration: none;
+}
+
+.btn-apply:hover {
+  background-color: transparent;
+  color: white !important;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Sidebar Component ===== */
+/* Vertical sidebar - always visible on desktop */
+.vertical-sidebar {
+  position: fixed;
+  right: 5px;
+  top: 4rem;
+  bottom: 0;
+  width: 150px;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.vertical-menu-item {
+  width: 150px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.vertical-menu-item i {
+  font-size: 16px;
+  margin-right: 0;
+  transition: margin 0.3s ease;
+}
+
+.vertical-menu-item:hover i,
+.vertical-menu-item.active i {
+  margin-right: 8px;
+}
+
+.vertical-menu-link {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  color: white;
+  padding: 0 15px;
+  text-decoration: none;
+}
+
+/* Menu item name styling */
+.menu-item-name {
+  margin-left: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+/* Expand the sidebar item on hover to show the name */
+.vertical-menu-item:hover {
+  width: auto;
+  min-width: 50px;
+  padding-right: 15px;
+  z-index: 1001;
+}
+
+.vertical-menu-item:hover .menu-item-name {
+  display: inline-block;
+}
+
+/* Style for active menu items */
+.vertical-menu-item.active {
+  width: auto;
+  min-width: 50px;
+  padding-right: 15px;
+}
+
+.vertical-menu-item.active .menu-item-name {
+  display: inline-block;
+}
+
+/* Expandable submenu panel */
+.submenu-panel {
+  position: fixed;
+  top: 0;
+  right: 50px;
+  width: 300px;
+  height: 100%;
+  background-color: #343a40;
+  z-index: 999;
+  color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  transform: translateX(300px); /* Start position */
+  animation: slideIn 0.3s ease forwards;
+}
+
+.submenu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.submenu-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.close-submenu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.close-submenu:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.submenu-content {
+  padding: 20px;
+}
+
+.submenu-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.submenu-link {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px !important;
+  transition: all 0.3s ease;
+  font-size: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.submenu-link:hover {
+  color: var(--sse-secondary);
+  padding-left: 5px;
+}
+
+/* Overlay when submenu is open */
+.submenu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  cursor: pointer;
+}
+
+/* Mobile toggle */
+.mobile-toggle-container {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1001;
+  display: none;
+}
+
+.mobile-toggle {
+  width: 40px;
+  height: 40px;
+  background-color: var(--sse-secondary);
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.mobile-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  height: 100%;
+  background-color: white;
+  z-index: 1000;
+  transition: right 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+}
+
+.mobile-sidebar.open {
+  right: 0;
+}
+
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background-color: var(--sse-dark);
+  color: white;
+}
+
+.footer-top {
+  padding: 80px 0 50px;
+}
+
+.footer-widget {
+  margin-bottom: 30px;
+}
+
+.footer-widget h3 {
+  color: white;
+  font-size: 20px;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.footer-widget h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--sse-secondary);
+}
+
+.about-widget p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-info {
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.contact-item i {
+  color: var(--sse-secondary);
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+.contact-item p {
+  font-size: 14px;
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  background-color: var(--sse-secondary);
+  transform: translateY(-3px);
+}
+
+.quick-links ul,
+.resources ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.quick-links li,
+.resources li {
+  margin-bottom: 12px;
+}
+
+.quick-links a,
+.resources a {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.quick-links a::before,
+.resources a::before {
+  content: '\f105';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  margin-right: 10px;
+  color: var(--sse-secondary);
+}
+
+.quick-links a:hover,
+.resources a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+.newsletter p {
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.newsletter-form {
+  display: flex;
+  margin-bottom: 25px;
+}
+
+.newsletter-form input {
+  flex: 1;
+  height: 45px;
+  padding: 0 15px;
+  border: none;
+  border-radius: 5px 0 0 5px;
+  font-size: 14px;
+}
+
+.newsletter-form button {
+  background-color: var(--sse-secondary);
+  color: white;
+  border: none;
+  padding: 0 20px;
+  border-radius: 0 5px 5px 0;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.footer-bottom {
+  padding: 20px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 14px;
+}
+
+.footer-bottom p {
+  margin-bottom: 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-bottom-links {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-end;
+}
+
+.footer-bottom-links a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.3s ease;
+}
+
+/* Responsive Layout Styles */
+@media (max-width: 991.98px) {
+  /* Navbar responsive */
+  .navbar-collapse {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #112c7e;
+    padding: 20px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+    display: block !important;
+  }
+  
+  .navbar-collapse.show {
+    max-height: 500px;
+  }
+
+  /* Sidebar responsive */
+  .vertical-sidebar {
+    display: none;
+  }
+  
+  .mobile-toggle-container {
+    display: block;
+  }
+  
+  /* Footer responsive */
+  .footer-widget {
+    margin-bottom: 40px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* Mobile nav styles */
+  .nav-item {
+    width: 100%;
+    margin: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  
+  .dropdown-menu {
+    position: static !important;
+    float: none;
+    width: 100%;
+    background-color: rgba(0,0,0,0.1);
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0 0 0 20px;
+    margin-top: 0;
+  }
+  
+  /* Sidebar menu responsive adjustments */
+  .vertical-menu-item:hover,
+  .vertical-menu-item.active {
+    width: 50px;
+    padding-right: 0;
+  }
+  
+  .vertical-menu-item:hover .menu-item-name,
+  .vertical-menu-item.active .menu-item-name {
+    display: none;
+  }
+  
+  .submenu-panel {
+    right: 0;
+    width: 250px;
+  }
+  
+  /* Footer responsive */
+  .footer-bottom-links {
+    margin-top: 15px;
+    justify-content: flex-start;
+  }
+}
+
+/* Animations */
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(300px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

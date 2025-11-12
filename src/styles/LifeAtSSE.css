@@ -1,0 +1,227 @@
+/* Styling for LifeAtSSE.jsx - with brand colors */
+
+/* Brand color variables */
+:root {
+  --sse-brand: #F9843D;      /* Main brand color (orange) */
+  --sse-brand-dark: #8E3D19; /* Darker brand color (brown) */
+  --sse-light: #f8f9fa;      /* Light background */
+  --sse-dark: #343a40;       /* Dark text */
+}
+
+/* Brand color button class */
+.btn-brand {
+  background-color: var(--sse-brand);
+  border-color: var(--sse-brand);
+  color: white;
+}
+
+.btn-brand:hover, 
+.btn-brand:focus {
+  background-color: var(--sse-brand-dark);
+  border-color: var(--sse-brand-dark);
+  color: white;
+}
+
+/* Button effects */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hover-effect:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Parallax Sections - solid colors with image backgrounds */
+.parallax-header {
+  height: 80vh;
+  background-color: var(--sse-brand); 
+  background-image: url(../assets/ssecampus.jpg);
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: ce;
+  background-blend-mode: multiply;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallax-section {
+  background-color: var(--sse-brand);
+  background-image: url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  padding: 100px 0;
+}
+
+.parallax-gallery {
+  background-color: var(--sse-brand-dark);
+  background-image: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  padding: 100px 0;
+}
+
+.parallax-cta {
+  background-color: var(--sse-brand);
+  background-image: url('https://images.unsplash.com/photo-1523580494863-6f3031224c94?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  padding: 100px 0;
+}
+
+/* Feature icon styles */
+.feature-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  min-width: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--sse-brand) !important;
+  color: white;
+  border-radius: 50%;
+}
+
+/* Gallery card hover effect */
+.gallery-card {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Make sure testimonial cards are equal height */
+.testimonial-card {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Override Bootstrap text-primary class */
+.text-primary {
+  color: var(--sse-brand) !important;
+}
+
+.bg-primary {
+  background-color: var(--sse-brand) !important;
+}
+
+/* For animation effects */
+.animate__animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+.animate__fadeIn {
+  animation-name: fadeIn;
+}
+
+.animate__delay-1s {
+  animation-delay: 0.3s;
+}
+
+.animate__delay-2s {
+  animation-delay: 0.6s;
+}
+
+.animate__delay-3s {
+  animation-delay: 0.9s;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Image container styles */
+.image-container {
+  border-radius: 8px;
+  overflow: hidden;
+  height: 250px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-container:hover img {
+  transform: scale(1.05);
+}
+
+/* Content section styling */
+.content-section {
+  padding: 80px 0;
+}
+
+.content-section.bg-light {
+  background-color: var(--sse-light);
+}
+
+/* Make responsive adjustments */
+@media (max-width: 991.98px) {
+  .parallax-header {
+    height: 70vh;
+  }
+  
+  .content-section {
+    padding: 60px 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .parallax-header {
+    height: 60vh;
+  }
+  
+  .parallax-section,
+  .parallax-gallery,
+  .parallax-cta {
+    padding: 60px 0;
+    background-attachment: scroll;
+  }
+  
+  .image-container {
+    height: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .content-section {
+    padding: 40px 0;
+  }
+}
